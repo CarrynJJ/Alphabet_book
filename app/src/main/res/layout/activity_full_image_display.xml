@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.carrynjayne.alphabet_book.FullImageDisplay">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="587dp">
+
+        <Button
+            android:id="@+id/overviewButton"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="overviewClicked"
+            android:text="Back to overview"
+            android:textAlignment="viewStart" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/slide01"
+        android:scaleType="centerInside"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentEnd="false"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="27dp"
+            android:keepScreenOn="true"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/firstButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="firstButtonClicked"
+                android:text="First('A')"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/prevButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="prevButtonClicked"
+                android:text="Prev"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="nextButtonClicked"
+                android:text="Next"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/lastButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="lastButtonClicked"
+                android:text="Last('Z')"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
